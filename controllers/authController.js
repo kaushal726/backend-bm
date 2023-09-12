@@ -40,7 +40,7 @@ let login = async (req, res) => {
                 id: user.id,
             }
         }, process.env.ACCESS_TOKEN_SECRET, {
-            expiresIn: "5m"
+            expiresIn: "55m"
         })
         res.json({ accessToken })
     }

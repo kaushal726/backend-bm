@@ -10,13 +10,24 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    email: {
+    particular: {
         type: String,
         required: true,
     },
-    age: {
+    rate: {
         type: Number,
         required: true,
+    },
+    quantity: {
+        type: Number,
+        required: true,
+    },
+    discount: {
+        type: Number,
+    },
+    total: {
+        type: Number,
+        required: true
     },
     created_at: {
         type: String,
