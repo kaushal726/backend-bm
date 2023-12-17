@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "e8cbb06d-ae03-4deb-a3f2-7e0b47a0381d",
+		"name": "Business Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31847407"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kv@gmail.com\",\r\n    \"password\":\"varun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "User Login"
+			},
+			"response": []
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "64f8a43252090bc7b17a0129",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoia2F1c3JhaiIsImVtYWlsIjoia3IxNUBnbWFpbC5jb20iLCJpZCI6IjY0ZmM0YTQ3N2M1MDY1ZTkxYmJiZWRiMSJ9LCJpYXQiOjE2OTQyODE5ODEsImV4cCI6MTY5NDI4MjI4MX0.RGLsca9WBoSUV2DYq0FZkuuZz76uSeEte7MfNj8g_cA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Kumar Varun\",\r\n    \"email\":\"kv@gmail.com\",\r\n    \"password\":\"varun\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show User Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiS3VtYXIgVmFydW4iLCJlbWFpbCI6Imt2QGdtYWlsLmNvbSIsImlkIjoiNjRmZmQ2YzE5YTZiYTM1NjdkYWY0M2RlIn0sImlhdCI6MTcwMjc4ODc1MSwiZXhwIjoxNzAyNzkyMjkxfQ.zEPEvqnUbT2H2CybmDzIe8_DbPcWDP6x_wG4DAYkPtE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Users Data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiS3VtYXIgVmFydW4iLCJlbWFpbCI6Imt2QGdtYWlsLmNvbSIsImlkIjoiNjRmZmQ2YzE5YTZiYTM1NjdkYWY0M2RlIn0sImlhdCI6MTY5NDUzNjQxMiwiZXhwIjoxNjk0NTM5NzEyfQ.CRmWdN-ZBmLcDduZTqCaxbJXkkT96LyAbGQaOjeXY5Q",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ran\",\r\n    \"email\":\"Kaush@gmail.com\",\r\n    \"age\":22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/update/6500232df38b6d2160da70d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update",
+						"6500232df38b6d2160da70d6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

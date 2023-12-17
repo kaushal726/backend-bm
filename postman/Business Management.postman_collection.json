@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "e8cbb06d-ae03-4deb-a3f2-7e0b47a0381d",
+		"name": "Business Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31847407"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kv@gmail.com\",\r\n    \"password\":\"varun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login",
+				"description": "User Login"
+			},
+			"response": []
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Kaushu\",\r\n    \"email\":\"kaus@gmail.com\",\r\n    \"password\":\"kaushal\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Show User Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authorization}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/users/show"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Users Data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authorization}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ran\",\r\n    \"email\":\"Kaush@gmail.com\",\r\n    \"age\":22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/update/6500232df38b6d2160da70d6"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authorization}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Kumar varun\",\r\n    \"particular\":\"ACC\",\r\n    \"rate\":350,\r\n    \"quantity\":15,\r\n    \"discount\":200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/create"
+			},
+			"response": []
+		}
+	]
+}
